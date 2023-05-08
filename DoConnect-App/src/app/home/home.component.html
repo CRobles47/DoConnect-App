@@ -1,0 +1,22 @@
+<div *ngIf="!isLoggedIn" id="sliderDiv" class="container-fluid mt-2">
+    <mdb-carousel id="carousel" [controls]="true" [indicators]="true">
+      <mdb-carousel-item>
+        <img
+          src="https://advicesacademy.com/wp-content/uploads/2018/03/Best-Question-and-Answer-Sites.jpg"
+          class="d-block w-100"
+          alt="..."
+        />
+      </mdb-carousel-item>
+      <mdb-carousel-item>
+        <img
+          src="https://us.123rf.com/450wm/shutterhero/shutterhero2101/shutterhero210100002/162069432-q-and-a-letters-on-a-wooden-cube-a-question-and-answer-concept.jpg?ver=6"
+          class="d-block w-100"
+          alt="..."
+        />
+      </mdb-carousel-item>
+    </mdb-carousel>
+</div>
+
+<div *ngIf="isLoggedIn" class="container-fluid">
+    <app-question-list></app-question-list>
+</div>

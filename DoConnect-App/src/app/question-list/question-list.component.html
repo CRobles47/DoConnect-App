@@ -1,0 +1,19 @@
+<div class="container-fluid mt-5">
+    <table class="justify-content-center">
+        <tr id="header-row">
+            <th>Title</th>
+            <th>Question</th>
+            <th>Date/Time</th>
+            <th>Category</th>
+        </tr>
+        <tr *ngFor="let question of questions" (click)="goToQuestion(question)">
+            <ng-container *ngIf="question.approved">
+                <td>{{ question.title }}</td>
+                <td *ngIf="question.questionBody.length>40; else shortBody;">{{ question.questionBody | slice:0:40}}...</td>
+                <ng-template #shortBody><td>{{ question.questionBody }}</td></ng-template>
+                <td>{{ question.datetime | date: 'short'}}</td>
+                <td>{{ question.category }}</td> 
+            </ng-container>
+        </tr>
+    </table>
+</div>

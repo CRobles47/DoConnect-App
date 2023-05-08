@@ -1,0 +1,40 @@
+table{
+    margin: auto;
+}
+
+tr{
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+th {
+    padding: 5px 10px;
+}
+
+td{
+    padding: 5px;
+}
+
+#header-row{
+    background-color: #354F52;
+    color: rgba(251, 251, 251, 0.854);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    border: none;
+}
+
+table{
+    tr:hover{
+        background-color: #52796F;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+table{
+    tr{
+       td{
+        padding: 25px;
+       }
+    }
+}

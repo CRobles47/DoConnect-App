@@ -1,0 +1,63 @@
+<div *ngIf="!isAdmin" id="registerForm" class="d-flex flex-column align-items-center mt-5 pt-5">
+
+    <div>
+        <h2>Sign Up</h2>
+    </div>
+
+    <div class="signup-form w-50">
+        <form #signup="ngForm" class="p-2" (ngSubmit)="onSubmit()">
+            <div class="form-outline mb-4 shadow-5-strong">
+                <input type="email" name="email" class="form-control" required [(ngModel)]="newUser.email"/>
+                <label class="form-label" for="password">Email</label>
+            </div>
+
+            <div class="form-outline mb-4 shadow-5-strong">
+                <input type="text" name="username" class="form-control" required [(ngModel)]="newUser.username"/>
+                <label class="form-label" for="username">Username</label>
+            </div>
+        
+            <div class="form-outline mb-4 shadow-5-strong">
+                <input type="password" name="password" class="form-control" required [(ngModel)]="newUser.password"/>
+                <label class="form-label" for="password">Password</label>
+            </div>
+
+            <button [disabled]="signup.invalid" type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+    </div>
+
+    <br>
+    <button type="button" class="btn btn-tertiary" mdbRipple (click)="setAdmin()">Administrator? Click here</button>
+
+</div>
+
+<div *ngIf="isAdmin" id="registerForm" class="d-flex flex-column align-items-center mt-5 pt-5">
+
+    <div>
+        <h2>Admin Sign Up</h2>
+    </div>
+
+    <div class="signup-form w-50">
+        <form #signup="ngForm" class="p-2" (ngSubmit)="onSubmit()">
+            <div class="form-outline mb-4 shadow-5-strong">
+                <input type="email" name="email" class="form-control" required [(ngModel)]="newAdmin.email"/>
+                <label class="form-label" for="password">Email</label>
+            </div>
+
+            <div class="form-outline mb-4 shadow-5-strong">
+                <input type="text" name="username" class="form-control" required [(ngModel)]="newAdmin.username"/>
+                <label class="form-label" for="username">Username</label>
+            </div>
+        
+            <div class="form-outline mb-4 shadow-5-strong">
+                <input type="password" name="password" class="form-control" required [(ngModel)]="newAdmin.password"/>
+                <label class="form-label" for="password">Password</label>
+            </div>
+
+            <button [disabled]="signup.invalid" type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+    </div>
+
+    <br>
+    <button type="button" class="btn btn-tertiary" mdbRipple (click)="setAdmin()">Not An Administrator? Click here</button>
+
+</div>

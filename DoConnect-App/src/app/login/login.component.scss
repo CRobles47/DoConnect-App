@@ -1,0 +1,36 @@
+button[disabled]{
+    background-color: #84A98C;
+}
+
+form{
+    background-color: rgba(255, 255, 255, 0.796);
+}
+
+form{
+    a{
+        color: #52796F;
+    }
+}
+
+form{
+    a:hover{
+        color: #9dbda3;
+    }
+}
+
+.form-outline{
+    .form-control:focus ~ .form-label{
+        color:#52796F;
+    }
+}
+
+.form-outline {
+    input{
+        background-color: rgba(255, 254, 254, 0.738);
+    }
+}
+
+#checkbox:checked{
+    background-color: #52796F;
+}
+

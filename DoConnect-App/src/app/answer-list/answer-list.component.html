@@ -1,0 +1,27 @@
+<div id='answerList' class="d-flex align-items-center" *ngIf="answersDisplay && answersDisplay.length>0; else noAnswers">
+    <h2>Answers</h2>
+    <ng-container *ngFor="let answer of answersDisplay">
+        <div *ngIf="answer.approved" class="card text-center mt-5 shadow-5-strong ">
+
+            <!--Body-->
+            <div class="card-body">
+            <p class="card-text">{{ answer.answer_body }}</p>
+        
+            <div *ngIf="answer.img_src !== ''" class="container"><img class="img-fluid" src={{answer.img_src}}></div>
+            </div>
+            <hr>
+
+            <!--Footer-->
+            <div id="footer" class="card-header">
+                <span id="username" class="align-self-start">{{ answer.created_by }}</span>
+                <span id="datetime" >{{ answer.datetime | date: 'short'}}</span>
+            </div>
+        </div>
+    </ng-container>
+</div>
+
+<ng-template #noAnswers>
+    <div class="d-flex align-items-center mt-5">
+        <h3>Be the first to reply!</h3>
+    </div>
+</ng-template>

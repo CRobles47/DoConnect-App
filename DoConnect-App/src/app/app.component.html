@@ -1,0 +1,40 @@
+<div>
+
+  <div class="container-lg">
+    <nav class="navbar navbar-light bg-white shadow-custom rounded-5 fixed-top">
+      <div id="navDiv" class="d-flex justify-content-between w-100">
+        <h1>
+          <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="router-link-active"  style="padding-top: 10px;">DoConnect <span *ngIf="isAdmin">Admin</span></a>
+        </h1>
+  
+          <div class="mt-1" *ngIf="!isLoggedIn">
+            <button type="button" class="btn btn-primary">
+              <a [routerLink]="['/login']" routerLinkActive="router-link-active" style="color:white">Login</a>
+            </button>
+            <button type="button" class="btn btn-link">
+              <a [routerLink]="['/sign-up']" routerLinkActive="router-link-active" style="color: #84A98C">Sign up for free</a>
+            </button>
+          </div>
+
+          <div class="d-flex ms-auto justify-content-center align-items-center" *ngIf="isLoggedIn">
+            <app-search></app-search>
+            <button type="button" class="btn btn-secondary me-3" (click)="createAQuestion()">
+              <a>Create A Question</a>
+            </button>
+            <button type="button" class="btn btn-primary me-3" *ngIf="isAdmin">
+              <a [routerLink]="['/admin']" routerLinkActive="router-link-active" style="color:white">Admin</a>
+            </button>
+            <button type="button" class="btn btn-primary me-3">
+              <a (click)="logout()" style="color:white">Logout</a>
+            </button>
+          </div>
+
+      </div>
+    </nav>
+  </div>
+
+  <div id="contentDiv">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

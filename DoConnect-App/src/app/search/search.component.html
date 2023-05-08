@@ -1,0 +1,6 @@
+<div id="searchBar">
+    <input #searchInput type="text" 
+            placeholder="Search Questions"
+            (keyup.enter)="search(searchInput.value)" />
+    <button type="submit" (click)="search(searchInput.value)">Search</button>
+</div>

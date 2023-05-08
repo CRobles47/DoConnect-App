@@ -1,0 +1,14 @@
+<form #createAnswer="ngForm" class="container card w-75 p-2 mt-5" (ngSubmit)="onSubmit()">
+    <div class="form-outline mb-4 shadow-5-strong">
+        <input type="text" name="body" class="form-control" [(ngModel)]="answer.answer_body" required>
+        <label class="form-label" for="body">Answer</label>
+    </div>
+    <div>
+        <label for="file-input">Upload Image</label>
+       <input type="file" id="file-input" name="file" (change)="onFileChange($event)">
+        <br>
+    </div>
+    <div class="p-2 text-end">
+        <button [disabled]="createAnswer.invalid" type="submit" class="btn btn-primary m-auto">Post Answer</button>
+    </div>
+</form>

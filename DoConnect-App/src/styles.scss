@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '@fortawesome/fontawesome-free/scss/solid.scss';
+@import '@fortawesome/fontawesome-free/scss/regular.scss';
+@import '@fortawesome/fontawesome-free/scss/brands.scss';
+
+@import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+
+body{
+    background-color: #cad2c5;
+}
+
+// img{
+//     width: 500px;
+// }
+
+.btn-primary{
+    background-color: #52796f;
+    box-shadow: 0 4px 9px -4px #2F3E46;
+}
+
+.btn-primary:hover{
+    background-color: #2f3e46;
+    box-shadow: 0 4px 9px -4px #2F3E46;
+}
+
+.btn-primary:active{
+    background-color: #2F3E46;
+    box-shadow: 0 4px 9px -4px #2F3E46;
+}
+
+.btn-primary:focus{
+    background-color: #2F3E46;
+    box-shadow: 0 4px 9px -4px #2F3E46;
+}
+
+.btn-primary[disabled]{
+    box-shadow: 0 4px 9px -4px #2F3E46;
+}
+
+.btn-secondary {
+    background-color: #84a98c4a;
+    color: black;
+}
+
+.btn-secondary:hover {
+    background-color: #84A98C;
+    color: white;
+}
+
+.btn-secondary:active {
+    background-color: #84A98C;
+    color: white;
+}
+
+.btn-secondary:focus {
+    background-color: #84A98C;
+    color: white;
+}

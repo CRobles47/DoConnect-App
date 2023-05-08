@@ -1,0 +1,27 @@
+<div class="create-question">
+    <form #createQuestion="ngForm" class="container card w-75 p-2" (ngSubmit)="onSubmit()">
+        <div class="form-outline mb-4 shadow-5-strong">
+            <input type="email" name="email" class="form-control" required [(ngModel)]="question.title"/>
+            <label class="form-label" for="password">Subject</label>
+        </div>
+
+        <div class="form-outline mb-4 shadow-5-strong">
+            <input type="text" name="body" class="form-control" required [(ngModel)]="question.questionBody"/>
+            <label class="form-label" for="username">Question</label>
+        </div>
+        <div class="p-2 text-start">
+            <h6>Select A Topic</h6>
+            <select name="category" class="form-control" [(ngModel)]="selectedCategory" required>
+                <option *ngFor="let category of categories" [value]="category.name">{{ category.name }}</option>
+            </select>
+        </div>
+        <div>
+            <label for="file-input">Upload Image</label>
+           <input type="file" id="file-input" name="file" (change)="onFileChange($event)">
+            <br>
+        </div>
+        <div class="p-2 text-end">
+            <button [disabled]="createQuestion.invalid" type="submit" class="btn btn-primary m-auto">Post Question</button>
+        </div>
+    </form>
+</div>

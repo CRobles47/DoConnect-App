@@ -1,0 +1,44 @@
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.165);
+    margin: auto;
+    min-width: 400px;
+    max-width: 800px;
+}
+
+.card-body{
+    padding-bottom: 8px;
+}
+
+.card-header{
+    text-align: right;
+}
+
+.container {
+    margin: auto;
+}
+
+#category{
+    background-color: #52796f95;
+    padding: 5px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.457);
+    font-size: 12px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+hr{
+    margin-bottom: 5px;
+}
+
+#footer{
+    padding-bottom: 0;
+}
+
+#username{
+    color: #84A98C;
+}
+
+#datetime{
+    color: lightgray;
+    margin-left: 20px;
+}
