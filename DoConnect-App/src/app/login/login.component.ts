@@ -5,6 +5,7 @@ import { TokenStorageService } from './token-storage.service';
 import { Router } from '@angular/router';
 import { LoginService } from './login.service';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -15,13 +16,19 @@ export class LoginComponent {
   user = new User('','');
   submitted = false;
   loggedIn = false;
+  loginForm: FormGroup;
 
   constructor(
     private userService: UserService, 
     private tokenStorageService: TokenStorageService, 
     private router: Router,
     private loginService: LoginService
-  ) {}
+  ) {
+    this.loginForm = new FormGroup({
+      username: new FormControl(null, { validators: Validators.required, updateOn: 'submit' }),
+      password: new FormControl(null, { validators: Validators.required, updateOn: 'submit' }),
+    });
+  }
 
   login(){
     let loggedInUser: User;
